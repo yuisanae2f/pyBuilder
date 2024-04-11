@@ -1,13 +1,14 @@
 super_ignore_and_just_run_this = ""
 
 path = {
-    "gcc": "C:/TDM-GCC-64/bin/g++",
-    "build": "./built/build",
+    "cpp": "C:/TDM-GCC-64/bin/g++",
+    "c": "gcc",
+    "build": "./built",
+    "obj": "./obj",
     "sources": "./"
 }
 
-srcExtensions = ['.c', '.cpp']
-
-args = {
-    "pre": '-o'
+ext = {
+    'c': ['.c'],
+    'cpp': ['.cpp', '.c++']
 }
