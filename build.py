@@ -19,16 +19,19 @@ def files(r, _ext):
 
     return rtn
 
-if __name__ == "__main__":
+def main():
     llen = 0
     for cc in ['c', 'cpp']:
         for i in files(s.path['sources'], cc):
-            cmd = s.path[cc] + ' -c ' + i + ' -o ' + s.path['obj'] + '/' + i.replace('/', '').replace('.', '').replace('\\','') + str(llen) + '.o'
+            cmd = s.path[cc] + ' -c ' + i + ' -o ' + s.path['obj'][0] + '/' + i.replace('/', '').replace('.', '').replace('\\','') + str(llen) + '.o'
             llen += 1
             print("Compile: " + cmd)
             os.system(cmd)
 
-    cmd = s.path['cpp'] + ' -o ' + s.path['build'] + ' ' + ''.join((e + ' ') for e in files(s.path['obj'], 'o'))
-    cmd = cmd if s.super_ignore_and_just_run_this == '' else s.super_ignore_and_just_run_this
+    if s.mode == 'exe':
+        cmd = s.path['cpp'] + ' -o ' + s.path['build'] + ' ' + ''.join((e + ' ') for e in [item for i in s.path['obj'] for item in files(i, 'o')])
     print("Run: " + cmd)
     os.system(cmd)
+
+if __name__ == "__main__":
+    main()

@@ -12,13 +12,20 @@
 ## gcc
 > Path of the GCC Compiler.
 
-## build
+## build 
 > Path to store the built executable file.
 
 ## sources
 > Path where the source codes are located.
 
-# srcExtensions
+## obj
+> Paths where the object files are located.
+> Generated object files from sources will be located at the first path written at the first index.
+
+## subproj
+> Paths where the dependencies are located.  
+
+# ext
 > is the array of file extensions to be decided to be compiled.
 
 # args
