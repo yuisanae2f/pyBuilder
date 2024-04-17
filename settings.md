@@ -2,9 +2,8 @@
 > Manage the values when running [build.py](./build.py)  
 > Do not change the keys(the strings which goes before columns).
 
-# super_ignore_and_just_run_this
-> When it is not "",
-> this will be decided the entire command line.
+# mode
+> when it is set as `exe` it will make an executable file.
 
 # path
 > Category for the paths.
