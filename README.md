@@ -4,8 +4,9 @@
 > tracks all the c/cpp file related, and builds them all an executable file.
 
 Warning
-> It is not suitable for the large project.
+> It is not suitable for the large project.  
 > You need `GCC compiler`, and `Python` to run it.
+> It has no dependency system.
 
 # you need
 - GCC compiler
